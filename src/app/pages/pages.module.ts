@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ProductosComponent } from './productos/productos.component';
+import { ComponentesModule } from '../componentes/componentes.module';
 
 
 
@@ -23,7 +24,8 @@ import { ProductosComponent } from './productos/productos.component';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    ComponentesModule
   ],
   exports:[
     DashboardComponent

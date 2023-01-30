@@ -8,12 +8,19 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
+import { TablaProductosComponent } from './tabla-productos/tabla-productos.component';
+import { MaterialModule } from '../material.module';
+import { ButtonDialogComponent } from './button-dialog/button-dialog.component';
+import { DialogProductoComponent } from './dialog-producto/dialog-producto.component';
 
 
 
 @NgModule({
   declarations: [
-    NavigationComponent
+    NavigationComponent,
+    TablaProductosComponent,
+    ButtonDialogComponent,
+    DialogProductoComponent
   ],
   imports: [
     CommonModule,
@@ -23,10 +30,14 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    MaterialModule
   ],
   exports:[
-    NavigationComponent
+    NavigationComponent,
+    TablaProductosComponent,
+    ButtonDialogComponent,
+    DialogProductoComponent
   ]
 })
 export class ComponentesModule { }
