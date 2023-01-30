@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ProductosService } from 'src/app/servicios/productos.service';
 
 @Component({
   selector: 'app-dialog-producto',
@@ -6,8 +8,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./dialog-producto.component.css']
 })
 export class DialogProductoComponent {
-  
-  guardarProducto(){
+  formGuardar!:FormGroup;
 
+  constructor(private frmb :FormBuilder , private productoservice:ProductosService){
+    this.formGuardar= this.frmb.group({
+      codPro:['',
+      [Validators.required]
+      ],
+      descripcion:['',
+      [Validators.required]
+      ],
+      cantidad:['',
+      [Validators.required]
+      ],
+      precio:['',
+      [Validators.required]
+      ],
+      
+    })
   }
+async guardarProducto(){
+  try {
+    const res=this.productoservice.agregarProducto(this.formGuardar.value);
+  } catch (error) {
+    console.log(error);
+  }
+}
+  
 }

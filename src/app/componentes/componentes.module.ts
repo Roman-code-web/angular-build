@@ -12,6 +12,7 @@ import { TablaProductosComponent } from './tabla-productos/tabla-productos.compo
 import { MaterialModule } from '../material.module';
 import { ButtonDialogComponent } from './button-dialog/button-dialog.component';
 import { DialogProductoComponent } from './dialog-producto/dialog-producto.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -31,7 +32,8 @@ import { DialogProductoComponent } from './dialog-producto/dialog-producto.compo
     MatIconModule,
     MatListModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   exports:[
     NavigationComponent,
