@@ -27,6 +27,7 @@ export class DialogProductoComponent {
       
     })
   }
+  //guardar
 async guardarProducto(){
   try {
     const res=this.productoservice.agregarProducto(this.formGuardar.value);
@@ -34,5 +35,8 @@ async guardarProducto(){
     console.log(error);
   }
 }
-  
+  //Validacion de formulario
+  validacion(name: string) {
+    return this.formGuardar.get(name)?.errors && (this.formGuardar.get(name)?.touched || this.formGuardar.get(name)?.dirty);
+  }
 }
