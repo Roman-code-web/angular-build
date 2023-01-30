@@ -7,6 +7,7 @@
         <th scope="col">DESCRIPCION</th>
         <th scope="col">CANTIDAD</th>
         <th scope="col">PRECIO</th>
+        <th scope="col">ELIMINAR</th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
         <td>{{producto.descripcion}}</td>
         <td>{{producto.cantidad}}</td>
         <td>{{producto.precio}}</td>
+        <td><button class="btn btn-danger" (click)="eliminarProducto(producto)"><i class="fa-solid fa-trash-can"></i></button></td>
       </tr>
     </tbody>
   </table>

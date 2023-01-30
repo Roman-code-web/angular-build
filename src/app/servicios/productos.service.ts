@@ -21,7 +21,7 @@ export class ProductosService {
     return collectionData(productoRef, {idField:'id'}) as Observable<Producto[]>
   }
   eliminarProducto( producto : Producto){
-    const productoRef = doc(this.firestore, `productos/${producto.codPro}`)
+    const productoRef = doc(this.firestore, `productos/${producto.id}`)
     return deleteDoc(productoRef);
   } 
 }
